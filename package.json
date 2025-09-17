@@ -1,0 +1,64 @@
+{
+  "name": "classeviva-js",
+  "version": "1.0.0",
+  "description": "JavaScript/Node.js wrapper for Classeviva API (Italian school register system)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node examples/esempio-base.js",
+    "test": "node examples/esempio-base.js",
+    "example": "node examples/esempio-base.js",
+    "dev": "node --watch examples/esempio-base.js",
+    "lint": "eslint src/ examples/",
+    "validate": "node -c src/index.js && echo '✅ Syntax validation passed'"
+  },
+  "keywords": [
+    "classeviva",
+    "api",
+    "wrapper",
+    "school",
+    "register",
+    "italy",
+    "italian",
+    "spaggiari",
+    "student",
+    "grades",
+    "absence",
+    "agenda",
+    "async",
+    "javascript",
+    "nodejs",
+    "es6",
+    "education"
+  ],
+  "author": {
+    "name": "Filippo Berti",
+    "email": "your-email@example.com",
+    "url": "https://github.com/your-username"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/classeviva-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/classeviva-js/issues"
+  },
+  "homepage": "https://github.com/your-username/classeviva-js#readme",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ]
+}
