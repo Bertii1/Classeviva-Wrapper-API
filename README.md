@@ -42,7 +42,7 @@ import { Utente, ListaUtenti } from 'classeviva-js';
 
 // Default import
 import Classeviva from 'classeviva-js';
-const utente = new Classeviva.Utente('S1234567', 'password');
+const utente = new Classeviva.Utente('utente', 'password');
 
 // Import specifici
 import { PasswordNonValida, validaDate } from 'classeviva-js';
@@ -55,7 +55,7 @@ import { Utente } from 'classeviva-js';
 
 async function main() {
     // Crea utente
-    const utente = new Utente('S1234567', 'tua_password');
+    const utente = new Utente('utente', 'tua_password');
     
     try {
         // Effettua l'accesso
@@ -93,9 +93,9 @@ import { Utente, ListaUtenti } from 'classeviva-js';
 async function gestisciClasse() {
     // Crea lista studenti
     const studenti = new ListaUtenti([
-        new Utente('S1111111', 'password1'),
-        new Utente('S2222222', 'password2'),
-        new Utente('S3333333', 'password3')
+        new Utente('utente1', 'password1'),
+        new Utente('utente2', 'password2'),
+        new Utente('utente3', 'password3')
     ]);
     
     try {
