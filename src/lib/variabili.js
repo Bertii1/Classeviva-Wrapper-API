@@ -59,11 +59,27 @@ export function anno() {
 }
 
 /**
+ * Restituisce l'anno di inizio dell'anno scolastico corrente.
+ * Se siamo tra settembre e dicembre, è l'anno corrente.
+ * Se siamo tra gennaio e agosto, è l'anno precedente.
+ * @returns {number} Anno di inizio a.s.
+ */
+export function annoScolasticoInizio() {
+    const oggi = new Date();
+    const mese = oggi.getMonth() + 1; // 1-12
+    // Se siamo da gennaio ad agosto, l'a.s. è iniziato l'anno prima
+    if (mese < 9) {
+        return anno() - 1;
+    }
+    return anno();
+}
+
+/**
  * Restituisce la data di inizio dell'anno scolastico (1 settembre)
  * @returns {string} Data in formato YYYYMMDD
  */
 export function dataInizioAnno() {
-    return `${anno()}0901`;
+    return `${annoScolasticoInizio()}0901`;
 }
 
 /**
@@ -71,7 +87,7 @@ export function dataInizioAnno() {
  * @returns {string} Data in formato YYYYMMDD  
  */
 export function dataFineAnno() {
-    return `${anno() + 1}0630`;
+    return `${annoScolasticoInizio() + 1}0630`;
 }
 
 /**
