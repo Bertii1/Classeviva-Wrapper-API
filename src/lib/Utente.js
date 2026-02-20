@@ -138,6 +138,11 @@ export class Utente {
                 this.inizio = new Date(this._dati.release);
                 this.fine = new Date(this._dati.expire);
                 this._token = this._dati.token;
+                // FIX: Aggiorna _id dall'ident ricevuto (rimuove S/G iniziale e finale)
+                // Necessario quando si fa login con email invece che con ID studente
+                if (this._dati.ident) {
+                    this._id = this._dati.ident.replace(/^[SG]/, '').replace(/[GS]$/, '');
+                }
             }
         } catch (error) {
             if (error.response?.status === 422) {
